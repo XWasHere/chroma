@@ -1,7 +1,11 @@
 "use strict";
 
-const query       = new URLSearchParams(document.location.search.substring(1));
-const hueInterval = ParseInt(query.get("delay"),10) || 0
+const query = new URLSearchParams(document.location.search.substring(1));
+
+let hueInterval = 0;
+if (query.has("delay")) {
+  hueInterval = ParseInt(query.get("delay"));
+}
 let rat = document.getElementById("rat");
 let hue = 0;
 
