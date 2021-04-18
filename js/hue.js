@@ -1,3 +1,5 @@
+"use strict";
+
 const hueInterval = 1;
 let rat = document.getElementById("rat");
 let hue = 0;
